@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              <span class="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO/BANNER -->
+
+    <section
+    class="hero min-h-screen"
+    style="background-image: url(data:image/jpeg;base64,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);">
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+        <p class="mb-5">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+          quasi. In deleniti eaque aut repudiandae et a id nisi.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+    </section>
+
+    <!-- about -->
+     <section class="flex justify-center items-center gap-10 py-20">
+        <div class="">
+            <h1>about me</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="avatar">
+            <div class="w-96 rounded-full">
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+     </section>
+
+     <!-- footer -->
+      <section class="">
+        <footer class="footer bg-base-200 text-base-content p-10">
+          <nav>
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </nav>
+          <form>
+            <h6 class="footer-title">Newsletter</h6>
+            <fieldset class="form-control w-80">
+              <label class="label">
+                <span class="label-text">Enter your email address</span>
+              </label>
+              <div class="join">
+                <input
+                  type="text"
+                  placeholder="username@site.com"
+                  class="input input-bordered join-item" />
+                <button class="btn btn-primary join-item">Subscribe</button>
+              </div>
+            </fieldset>
+          </form>
+        </footer>
+      </section>
+</body>
+</html>
